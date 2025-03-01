@@ -84,9 +84,9 @@
       <Project>{ac3b5d9f-9854-4378-b96d-c133beafcc67}</Project>
       <Name>MyLib</Name>
     </ProjectReference>
-    <ProjectReference Include="..\XZ\XZ.vbproj">
-      <Project>{1f3333af-a72f-4148-9da4-5a768afb8c5c}</Project>
-      <Name>XZ</Name>
+    <ProjectReference Include="..\UserCard\UserCard.csproj">
+      <Project>{35253305-9B65-41B1-ABEB-E094EF9ECC86}</Project>
+      <Name>UserCard</Name>
     </ProjectReference>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />

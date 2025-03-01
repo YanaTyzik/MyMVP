@@ -33,7 +33,7 @@
             this.NameFiltr = new System.Windows.Forms.Button();
             this.Clear = new System.Windows.Forms.Button();
             this.ComboBoxFiltr = new System.Windows.Forms.ComboBox();
-            this.userControl11 = new XZ.UserControl1();
+            this.userControl11 = new UserCard.UserControl1();
             ((System.ComponentModel.ISupportInitialize)(this.UsersList)).BeginInit();
             this.SuspendLayout();
             // 
@@ -84,16 +84,16 @@
             // 
             // userControl11
             // 
-            this.userControl11.Location = new System.Drawing.Point(29, 294);
+            this.userControl11.Location = new System.Drawing.Point(29, 300);
             this.userControl11.Name = "userControl11";
-            this.userControl11.Size = new System.Drawing.Size(353, 234);
+            this.userControl11.Size = new System.Drawing.Size(266, 207);
             this.userControl11.TabIndex = 5;
             // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(800, 539);
+            this.ClientSize = new System.Drawing.Size(800, 504);
             this.Controls.Add(this.userControl11);
             this.Controls.Add(this.ComboBoxFiltr);
             this.Controls.Add(this.Clear);
@@ -115,7 +115,7 @@
         private System.Windows.Forms.Button NameFiltr;
         private System.Windows.Forms.Button Clear;
         private System.Windows.Forms.ComboBox ComboBoxFiltr;
-        private XZ.UserControl1 userControl11;
+        private UserCard.UserControl1 userControl11;
     }
 }
 
