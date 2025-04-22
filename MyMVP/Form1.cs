@@ -1,4 +1,8 @@
-﻿using System;
+﻿using MyLib;
+using MyLib.Models;
+using MyLib.Views;
+using MyLib.Presenters;
+using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
@@ -12,12 +16,12 @@ namespace MyMVP
 {
     public partial class Form1 : Form, IUsersView
     {
-        private UsersPresenter presenter_;
+        private UsersPresenters presenter_;
 
         public Form1()
         {
             InitializeComponent();
-            presenter_ = new UsersPresenter(new MemoryUsersModel(), this);
+            presenter_ = new UsersPresenters(new MemoryUsersModel(), this, userCard);
         }
 
         public void Show(List<User> users)

@@ -6,10 +6,9 @@ using System.Threading.Tasks;
 
 namespace MyLib.Views
 {
-     public interface IIsersView
+    public interface IUserCard
     {
-        void Show(List<User> users);
-
-        int GetSelectedUserIndex();
+        event Action<User> UserChange;
+        void cShow(User u);
     }
 }
