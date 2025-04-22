@@ -7,9 +7,8 @@ using System.Threading.Tasks;
 namespace MyLib.Views
 {
      public interface IUsersView
-    {
+     {
         void Show(List<User> users);
-
         int GetSelectedUserIndex();
-    }
+     }
 }

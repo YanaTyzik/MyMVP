@@ -16,12 +16,12 @@ namespace MyMVP
 {
     public partial class Form1 : Form, IUsersView
     {
-        private UsersPresenters presenter_;
+        private UsersPresenter presenter_;
 
         public Form1()
         {
             InitializeComponent();
-            presenter_ = new UsersPresenters(new MemoryUsersModel(), this, userCard);
+            presenter_ = new UsersPresenter(new MemoryUsersModel(), this, userCard);
         }
 
         public void Show(List<User> users)

@@ -42,7 +42,8 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Models\IUsersModel.cs" />
-    <Compile Include="Presenters\UsersPresenters.cs" />
+    <Compile Include="Models\MemoryUsersModel.cs" />
+    <Compile Include="Presenters\UsersPresenter.cs" />
     <Compile Include="User.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="Views\IUsersView.cs" />
