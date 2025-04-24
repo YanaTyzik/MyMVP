@@ -9,6 +9,6 @@ namespace MyLib.Views
     public interface IUserCard
     {
         event Action<User> UserChange;
-        void cShow(User u);
+        void Show(User u);
     }
 }

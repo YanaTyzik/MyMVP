@@ -29,7 +29,13 @@ namespace MyLib.Presenters
             Model_ChangedUser(obj);
         }
 
-        private void Model__RefreshLoadedInfoUsers()
+        public void View__FiltrEvent(string FiltrOrder, string input)
+        {
+
+            model_.FiltrUserData(FiltrOrder, input);
+        }
+
+        public void Model__RefreshLoadedInfoUsers()
         {
             view_.Show(model_.ReturnUsers());
         }
@@ -39,9 +45,30 @@ namespace MyLib.Presenters
             view_.Show(model_.GetUsers());
         }
 
+        public void View__SelectedUser(int number)
+        {
+            if (number < 0 || number >= model_.GetUsers().Count)
+            {
+                return;
+            }
+            User u = model_.GetUsers()[number];
+            card_.Show(u);
+        }
+
         private void Model_ChangedUser(User u)
         {
+            model_.ChangeUser(u);
+        }
 
+        public void Model__DeleteUser()
+        {
+            int delIndex = view_.GetSelectedUserIndex();
+            if (delIndex < 0 || delIndex >= model_.GetUsers().Count)
+            {
+                return;
+            }
+            User u = model_.GetUsers()[delIndex];
+            model_.DeleteUser(u.Id);
         }
     }
 }

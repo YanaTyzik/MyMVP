@@ -38,6 +38,17 @@ namespace MyMVP
         private void Clear_Click(object sender, EventArgs e)
         {
             presenter_.Model__RefreshLoadedInfoUsers();
+            UsersList.Rows[0].Selected = true;
+        }
+
+        private void deleteButton_Click(object sender, EventArgs e)
+        {
+            DialogResult dialogResult = MessageBox.Show("Вы уверены что хотите мудалить?", "Подтверждение", MessageBoxButtons.YesNo);
+            if (dialogResult == DialogResult.Yes)
+            {
+                presenter_.Model__DeleteUser();
+            }
+            else if (dialogResult == DialogResult.No) { }
         }
     }
 }
