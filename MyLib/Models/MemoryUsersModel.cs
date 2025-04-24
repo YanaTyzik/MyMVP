@@ -46,7 +46,33 @@ namespace MyLib.Models
         {
             foreach (User current in _users)
             {
+                if(current.Id == u.Id)
+                {
+                    current.Name = u.Name;
+                    current.Surname = u.Surname;
+                    SuccessLoadedInfoUsers.Invoke();
+                }
+            }
 
+            foreach (User current in FiltrUser)
+            {
+                if (current.Id == u.Id)
+                {
+                    current.Name = u.Name;
+                    current.Surname = u.Surname;
+                    SuccessLoadedInfoUsers.Invoke();
+                }
+            }
+        }
+
+        public void DeleteUser(int del)
+        {
+            User delete = FiltrUser.FirstOrDefault(u => u.Id == del);
+            if (delete != null)
+            {
+                _users.Remove(delete); 
+                FiltrUser.Remove(delete);
+                SuccessLoadedInfoUsers.Invoke();
             }
         }
      }

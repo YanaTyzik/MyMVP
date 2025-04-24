@@ -19,8 +19,29 @@ namespace MyLib.Presenters
             model_ = model;
             view_ = view;
             card_ = card;
-            model_.SuccessLoadedInfoUsers += ModelSuccessLoadedInfoUsers;
+            model_.SuccessLoadedInfoUsers += Model_SuccessLoadedInfoUsers;
             model_.LoadInfoUsers();
+            card_.UserChange += Card_UserChange;
+        }
+
+        private void Card_UserChange(User obj)
+        {
+            Model_ChangedUser(obj);
+        }
+
+        private void Model__RefreshLoadedInfoUsers()
+        {
+            view_.Show(model_.ReturnUsers());
+        }
+
+        private void Model_SuccessLoadedInfoUsers()
+        {
+            view_.Show(model_.GetUsers());
+        }
+
+        private void Model_ChangedUser(User u)
+        {
+
         }
     }
 }

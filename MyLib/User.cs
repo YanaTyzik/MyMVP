@@ -12,5 +12,7 @@ namespace MyLib
         public string Name { get; set; }
         public string Surname { get; set; } 
         public DateTime DateBirth { get; set; }
+
+        public int Id;
     }
 }
